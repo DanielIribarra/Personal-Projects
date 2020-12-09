@@ -5,3 +5,11 @@ controllers:
 kernel:
     resource: ../../src/Kernel.php
     type: annotation
+
+app_index_inicio:
+    path: /
+    controller: App\Controller\Controller::inicio
+
+app_index_crearcuenta:
+    path: /index
+    controller: App\Controller\Controller::index

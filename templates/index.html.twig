@@ -1,0 +1,26 @@
+{% block title %}Test
+{% endblock %}
+{% block stylesheets %}
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+{% endblock %}
+{% block body %}
+    <div class='index'>
+        <button class="g-recaptcha" 
+        data-sitekey="reCAPTCHA_site_key" 
+        data-callback='onSubmit' 
+        data-action='submit'>Submit</button>
+    </div>
+{% endblock %}
+
+{# Scripts #}
+{% block javascripts %}
+    {# api call #}
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+
+    {# token #}
+    <script>
+        function onSubmit(token) {
+            document.getElementById("demo-form").submit();
+        }
+    </script>
+{% endblock %}
